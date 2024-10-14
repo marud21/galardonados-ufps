@@ -7,4 +7,4 @@ setInterval(() => {
     scrollAmount = 0;
   }
   gallerySlider.style.transform = `translateX(-${scrollAmount}px)`;
-}, 3000); // Cambia la imagen cada 3 segundos
+}, 5000); // Cambia la imagen cada 3 segundos

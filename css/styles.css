@@ -406,3 +406,7 @@ input[type="file"] {
     height: auto;
     margin-right: 10px;
   }
+
+  .gallery {
+    margin-bottom: 50px; /* Ajusta el valor según el espacio que desees */
+  }
