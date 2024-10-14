@@ -408,5 +408,6 @@ input[type="file"] {
   }
 
   .gallery {
+    margin-top: 50px;
     margin-bottom: 50px; /* Ajusta el valor según el espacio que desees */
   }
