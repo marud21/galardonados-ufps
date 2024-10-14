@@ -388,3 +388,21 @@ input[type="file"] {
 .convocatoria-info li {
     margin-bottom: 5px;
 }
+
+/* Estilos para la galería */
+.gallery-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .gallery-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .gallery-slider img {
+    width: 50%;
+    height: auto;
+    margin-right: 10px;
+  }
