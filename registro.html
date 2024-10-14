@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <img src="logo_ufps.png" alt="Logo de la Universidad" class="logo">
+                <div class="header-right">
+                    <h1>Sistema de Reconocimiento de Premios</h1>
+                    <nav>
+                        <div class="dropdown">
+                            <button class="dropbtn">&#9776;</button>
+                            <div class="dropdown-content">
+                                <a href="#">Iniciar sesión</a>
+                                <a href="#">Registrarse</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="login-form login-container">
+            <div class="container1">
+                <h2>Registrarse</h2>
+                <form id="registroForm">
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="apellido">Apellido:</label>
+                        <input type="text" id="apellido" name="apellido" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo electrónico:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Contraseña:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirmar contraseña:</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" required>
+                    </div>
+                    <button type="submit" class="button">Registrarse</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Universidad Francisco de Paula Santander</p>
+        </div>
+    </footer>
+
+    <script>
+        const form = document.getElementById('registroForm');
+        form.addEventListener('submit', function(event) {
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            if (password !== confirmPassword) {
+                alert('Las contraseñas no coinciden.');
+                event.preventDefault(); // Evita que se envíe el formulario
+            }
+        });
+    </script>
+</body>
+</html>

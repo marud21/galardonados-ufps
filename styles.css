@@ -1,0 +1,390 @@
+body {
+    font-family: 'Arial', sans-serif; /* Tipografía más moderna */
+    margin: 0;
+    background-color: #f4f4f4; /* Fondo gris claro */
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ... otros estilos ... */
+
+header {
+    background-color: #d91c22;
+    padding: 20px 40px; /* Aumenta el padding horizontal */
+    color: #fff;
+    display: flex; 
+    align-items: center; 
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    width: 100%; 
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+}
+
+.logo {
+    height: 80px; 
+    margin-right: 40px;
+    background-color: #fff; /* Fondo blanco para el logo */
+    padding: 10px; /* Añade un padding al logo */
+    border-radius: 5px; /* (Opcional) Bordes redondeados */
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 40px; /* Aumenta el espacio entre el título y el menú */
+}
+
+/* ... otros estilos ... */
+
+/* ... otros estilos ... */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: transparent; /* Fondo transparente */
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0; /* Alinea el menú a la derecha del botón */
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-left: 20px; /* Espacio entre los elementos del menú */
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.hero {
+    background-color: #fff; /* Fondo blanco */
+    padding: 40px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+h2 {
+    margin-top: 0;
+    color: #d91c22; /* Rojo UFPS */
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #d91c22; /* Rojo UFPS */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.button:hover {
+    background-color: #c8191f; /* Rojo más oscuro al pasar el mouse */
+}
+
+.features {
+    padding: 40px 0;
+    background-color: #f9f9f9; /* Gris muy claro */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Distribuye los elementos en línea */
+    justify-content: center; /* Centra los elementos horizontalmente */
+}
+
+li {
+    margin: 0 20px; /* Espacio entre elementos de la lista */
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* ... otros estilos ... */
+
+.centered {
+    text-align: center; /* Centra el título */
+    margin-bottom: 30px; /* Espacio inferior al título */
+  }
+  
+  .cards-container {
+    display: flex;
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en varias filas */
+  }
+  
+  .card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: 200px; /* Ajusta el ancho de las tarjetas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    text-align: center; /* Centra el contenido de la tarjeta */
+  }
+
+  /*ESTILOS DE LOGIN*/
+
+  /* ... otros estilos ... */
+
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* ... otros estilos ... */
+
+input[type="email"], 
+input[type="password"] {
+    width: 100%;
+    padding: 12px 20px; /* Aumenta el padding */
+    border: 2px solid #ccc; /* Borde más grueso */
+    border-radius: 25px; /* Bordes más redondeados */
+    box-sizing: border-box;
+    font-size: 16px; /* Aumenta el tamaño de la fuente */
+    transition: border-color 0.3s ease; /* Transición suave en el borde */
+}
+
+input[type="email"]:focus, 
+input[type="password"]:focus {
+    outline: none; /* Elimina el contorno predeterminado al hacer focus */
+    border-color: #d91c22; /* Cambia el color del borde al hacer focus */
+    box-shadow: 0 0 5px rgba(217, 28, 34, 0.3); /* Añade una sombra al hacer focus */
+}
+
+/* ... otros estilos ... */
+
+.signup-link {
+    margin-top: 20px;
+}
+
+/* GESTION CONVOCATORIAS */
+
+/* ... otros estilos ... */
+
+.manage-convocatorias {
+    background-color: #fff;
+    padding: 40px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.manage-convocatorias h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.manage-convocatorias .button {
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    table-layout: normal; /* Distribuye el espacio equitativamente entre las columnas */
+  }
+  
+  td {
+    white-space: nowrap; /*  */
+    overflow: hidden;
+    padding: 10px; /* Ajusta el padding según sea necesario */
+  }
+  
+  td .button {
+    display: inline-block;
+    margin: 5px; /* Espacio entre los botones */
+    white-space: normal; /* Permite que el texto del botón se ajuste */
+  }
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f0f0f0;
+}
+
+/* postulacion */
+
+/* ... otros estilos ... */
+
+.postulacion-form {
+    background-color: #fff;
+    padding: 40px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    border-radius: 10px; 
+    display: flex; /* Activa flexbox */
+    flex-direction: column; /* Alinea los elementos en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+}
+
+.postulacion-form .container {
+    max-width: 600px; /* Ajusta el ancho máximo del contenedor */
+    align-items: center;
+}
+
+
+.postulacion-form h2 {
+    color: #d91c22;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+    width: 100%;
+    max-width: 400px; /* Ajusta el ancho máximo de los elementos del formulario */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+select, 
+textarea,
+input[type="text"],
+input[type="email"] { 
+    width: 100%;
+    max-width: 400px; /* Ajusta el ancho máximo de los campos */
+    padding: 12px 20px;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    margin: 0 auto; /* Centra los campos horizontalmente */
+}
+
+select:focus, 
+textarea:focus {
+    outline: none; /* Elimina el contorno predeterminado al hacer focus */
+    border-color: #d91c22; /* Cambia el color del borde al hacer focus */
+    box-shadow: 0 0 5px rgba(217, 28, 34, 0.3); /* Añade una sombra al hacer focus */
+}
+
+input[type="file"] {
+    display: block;
+    margin-top: 5px;
+}
+
+/* ... otros estilos ... */
+
+/* Estilos para centrar el formulario */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la pantalla */
+    position: relative;
+    background-color: #fff;
+    padding: 5px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container1{
+    width: 100%;
+    max-width: 400px;
+    padding: 100px;
+    border-radius: 10px; 
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.convocatoria-info {
+    background-color: #f9f9f9;
+    padding: 30px 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.convocatoria-info h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.convocatoria-info p {
+    margin-bottom: 20px;
+}
+
+.convocatoria-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.convocatoria-info li {
+    margin-bottom: 5px;
+}

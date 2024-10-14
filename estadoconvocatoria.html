@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Convocatorias</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <img src="logo_ufps.png" alt="Logo de la Universidad" class="logo">
+        <div class="header-right">
+          <h1>Sistema de Reconocimiento de Premios</h1>
+          <nav>
+            <div class="dropdown">
+              <button class="dropbtn">&#9776;</button>
+              <div class="dropdown-content">
+                <a href="#">Iniciar sesión</a>
+                <a href="#">Registrarse</a>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="manage-convocatorias">
+      <div class="container">
+        <h2>Gestión de Convocatorias</h2>
+        <button class="button">Crear nueva convocatoria</button>
+        <table>
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Categoría</th>
+              <th>Fecha de inicio</th>
+              <th>Fecha de fin</th>
+              <th>Estado</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Convocatoria de Investigación 2023</td>
+              <td>Investigación</td>
+              <td>2023-08-15</td>
+              <td>2023-10-15</td>
+              <td>Abierta</td>
+              <td>
+                <button class="button">Editar</button>
+                <button class="button">Eliminar</button>
+                <a href="informacion_convocatoria.html?id=1" class="button">Información</a> 
+              </td>
+            </tr>
+            <tr>
+              <td>Premio al Mérito Académico</td>
+              <td>Mérito Académico</td>
+              <td>2023-09-01</td>
+              <td>2023-11-01</td>
+              <td>Cerrada</td>
+              <td>
+                <button class="button">Editar</button>
+                <button class="button">Eliminar</button>
+                <a href="informacion_convocatoria.html?id=2" class="button">Información</a> 
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Universidad Francisco de Paula Santander</p>
+    </div>
+  </footer>
+</body>
+</html>

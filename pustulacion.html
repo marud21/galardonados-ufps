@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postulación a Convocatoria</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <img src="logo_ufps.png" alt="Logo de la Universidad" class="logo">
+                <div class="header-right">
+                    <h1>Sistema de Reconocimiento de Premios</h1>
+                    <nav>
+                        <div class="dropdown">
+                            <button class="dropbtn">&#9776;</button>
+                            <div class="dropdown-content">
+                                <a href="#">Iniciar sesión</a>
+                                <a href="#">Registrarse</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="postulacion-form">
+            <div class="container">
+                <h2>Postulación a Convocatoria</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="convocatoria">Convocatoria:</label>
+                        <select id="convocatoria" name="convocatoria">
+                            <option value="">Selecciona una convocatoria</option>
+                            <option value="convocatoria1">Convocatoria de Investigación 2023</option>
+                            <option value="convocatoria2">Premio al Mérito Académico</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="nombre">Nombre completo:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo electrónico:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="categoria">Categoría:</label>
+                        <select id="categoria" name="categoria">
+                            <option value="">Selecciona una categoría</option>
+                            <option value="categoria1">Investigación</option>
+                            <option value="categoria2">Mérito Académico</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="logros">Logros y méritos:</label>
+                        <textarea id="logros" name="logros" rows="5" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="documentos">Documentos de soporte:</label>
+                        <input type="file" id="documentos" name="documentos" multiple>
+                    </div>
+                    <button type="submit" class="button">Enviar postulación</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Universidad Francisco de Paula Santander</p>
+        </div>
+    </footer>
+</body>
+</html>
