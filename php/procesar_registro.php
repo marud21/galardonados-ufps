@@ -1,30 +1,28 @@
-
 <?php
 
-include 'conexion.php';
+// Incluir el archivo de conexión
+require_once 'conexion.php';
+
+// Obtener la conexión
+$conn = conexion(); 
+
 // Obtener los datos del formulario
 $nombre = $_POST['nombre'];
 $apellido = $_POST['apellido'];
 $email = $_POST['email'];
-$password = password_hash($_POST['password'], PASSWORD_DEFAULT); // Encriptación de la contraseña
+$password = $_POST['password'];
 
+// Insertar datos en la base de datos
+$sql = "INSERT INTO usuarios (nombre, apellido, email, password) 
+        VALUES ('$nombre', '$apellido', '$email', '$password')";
 
-
-/
-// Crear consulta SQL
-$sql = "INSERT INTO usuarios (nombre, apellido, email, password) VALUES ('$nombre', '$apellido', '$email', '$password')";
-
-// Ejecutar la consulta y verificar si se realizó con éxito
-
-i
 if ($conn->query($sql) === TRUE) {
-    echo "Registro exitoso.";
+    echo "Registro exitoso!";
 } else {
-    
-   
-echo "Error: " . $sql . "<br>" . $conn->error;
+    echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
-// Cerrar conexión
+// Cerrar la conexión
 $conn->close();
+
 ?>
