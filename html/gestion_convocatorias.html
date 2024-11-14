@@ -1,83 +1,69 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gestión de Convocatorias</title>
-  <link rel="stylesheet" href="/css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Convocatoria</title>
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <div class="header-content">
-        <img src="/Img/logo_ufps.jpg" alt="Logo de la Universidad" class="logo">
-        <div class="header-right">
-          <h1>Sistema de Reconocimiento de Premios</h1>
-          <nav>
-            <div class="dropdown">
-              <button class="dropbtn">&#9776;</button>
-              <div class="dropdown-content">
-                <a href="#">Iniciar sesión</a>
-                <a href="#">Registrarse</a>
-              </div>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <img src="/Img/logo_ufps.jpg" alt="Logo de la Universidad" class="logo">
+                <div class="header-right">
+                    <h1>Sistema de Reconocimiento de Premios</h1>
+                    <nav>
+                        <div class="dropdown">
+                            <button class="dropbtn">&#9776;</button>
+                            <div class="dropdown-content">
+                                <a href="#">Iniciar sesión</a>
+                                <a href="#">Registrarse</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
             </div>
-          </nav>
         </div>
-      </div>
-    </div>
-  </header>
+    </header>
 
-  <main>
-    <section class="manage-convocatorias">
-      <div class="container">
-        <h2>Gestión de Convocatorias</h2>
-        <button class="button">Crear nueva convocatoria</button>
-        <table>
-          <thead>
-            <tr>
-              <th>Nombre</th>
-              <th>Categoría</th>
-              <th>Fecha de inicio</th>
-              <th>Fecha de fin</th>
-              <th>Estado</th>
-              <th>Acciones</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Convocatoria de Investigación 2023</td>
-              <td>Investigación</td>
-              <td>2023-08-15</td>
-              <td>2023-10-15</td>
-              <td>Abierta</td>
-              <td>
-                <button class="button">Editar</button>
-                <button class="button">Eliminar</button>
-                <a href="informacion_convocatoria.html?id=1" class="button">Información</a> 
-              </td>
-            </tr>
-            <tr>
-              <td>Premio al Mérito Académico</td>
-              <td>Mérito Académico</td>
-              <td>2023-09-01</td>
-              <td>2023-11-01</td>
-              <td>Cerrada</td>
-              <td>
-                <button class="button">Editar</button>
-                <button class="button">Eliminar</button>
-                <a href="informacion_convocatoria.html?id=2" class="button">Información</a> 
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-  </main>
+    <main>
+        <section class="ver-convocatoria">
+            <div class="container">
+                <h2>Detalles de la Convocatoria</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Categoría</th>
+                            <th>Fecha de inicio</th>
+                            <th>Fecha de fin</th>
+                            <th>Estado</th>
+                            <th>Acciones</th> <!-- Nueva columna para el botón Registrarse -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Convocatoria de Investigación</td>
+                            <td>Investigación</td>
+                            <td>2024-12-01</td>
+                            <td>2025-01-31</td>
+                            <td>Abierta</td>
+                            <td>
+                                <!-- Botón Registrarse agregado -->
+                                <button class="button" onclick="window.location.href='registrarse.html'">Registrarse</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2023 Universidad Francisco de Paula Santander</p>
-    </div>
-  </footer>
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Universidad Francisco de Paula Santander</p>
+        </div>
+    </footer>
 </body>
 </html>

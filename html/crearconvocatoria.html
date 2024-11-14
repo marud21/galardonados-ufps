@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,8 +34,8 @@
                         <div class="dropdown">
                             <button class="dropbtn">&#9776;</button>
                             <div class="dropdown-content">
-                                <a href="#">Iniciar sesión</a>
-                                <a href="#">Registrarse</a>
+                                <a href="/html/Login.html">Iniciar sesión</a>
+                                <a href="/html/registro.html">Registrarse</a>
                             </div>
                         </div>
                     </nav>
@@ -46,7 +46,7 @@
 
     <main>
         <section class="create-convocatoria">
-            <form action="procesar_convocatoria.php" method="post" class="convocatoria-form">
+            <form action="#" class="convocatoria-form">
                 <h2>Crear Convocatoria para Egresados</h2>
                 <div class="form-group">
                     <label for="nombre">Nombre de la convocatoria</label>
@@ -62,7 +62,7 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="descripcion">Logros y Meritos</label>
+                    <label for="descripcion">Logros y Méritos</label>
                     <textarea id="descripcion" name="descripcion" rows="5" required></textarea>
                 </div>
                 <div class="form-group">
@@ -91,5 +91,41 @@
             <p>&copy; 2023 Universidad Francisco de Paula Santander</p>
         </div>
     </footer>
+
+    <script>
+        // Script para manejar la publicación de la convocatoria
+        document.querySelector(".convocatoria-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevenir el envío del formulario por defecto
+
+            // Obtener los valores de los campos del formulario
+            const nombre = document.getElementById("nombre").value;
+            const categoria = document.getElementById("categoria").value;
+            const descripcion = document.getElementById("descripcion").value;
+            const encargado = document.getElementById("encargado").value;
+            const fechaInicio = document.getElementById("fecha_inicio").value;
+            const fechaFin = document.getElementById("fecha_fin").value;
+
+            // Crear un objeto de convocatoria con los datos obtenidos
+            const nuevaConvocatoria = {
+                nombre,
+                categoria,
+                descripcion,
+                encargado,
+                fechaInicio,
+                fechaFin,
+                estado: "Abierta"
+            };
+
+            // Obtener las convocatorias existentes de localStorage o inicializar como un array vacío
+            let convocatorias = JSON.parse(localStorage.getItem("convocatorias")) || [];
+            // Añadir la nueva convocatoria al array
+            convocatorias.push(nuevaConvocatoria);
+            // Guardar las convocatorias actualizadas en localStorage
+            localStorage.setItem("convocatorias", JSON.stringify(convocatorias));
+
+            // Redirigir a la página de gestión de convocatorias
+            window.location.href = "estadoconvocatoria.html";
+        });
+    </script>
 </body>
 </html>

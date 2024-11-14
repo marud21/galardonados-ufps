@@ -44,30 +44,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>Convocatoria de Investigación 2023</td>
-              <td>Investigación</td>
-              <td>2023-08-15</td>
-              <td>2023-10-15</td>
-              <td>Abierta</td>
-              <td>
-                <button class="button">Editar</button>
-                <button class="button">Eliminar</button>
-                <a href="informacion_convocatoria.html?id=1" class="button">Información</a> 
-              </td>
-            </tr>
-            <tr>
-              <td>Premio al Mérito Académico</td>
-              <td>Mérito Académico</td>
-              <td>2023-09-01</td>
-              <td>2023-11-01</td>
-              <td>Cerrada</td>
-              <td>
-                <button class="button">Editar</button>
-                <button class="button">Eliminar</button>
-                <a href="informacion_convocatoria.html?id=2" class="button">Información</a> 
-              </td>
-            </tr>
+            <!-- Las filas se llenarán dinámicamente con JavaScript -->
           </tbody>
         </table>
       </div>
@@ -79,5 +56,72 @@
       <p>&copy; 2023 Universidad Francisco de Paula Santander</p>
     </div>
   </footer>
+
+  <script>
+    window.onload = function() {
+        // Recuperar las convocatorias almacenadas en localStorage
+        let convocatorias = JSON.parse(localStorage.getItem("convocatorias")) || [];
+
+        // Obtener el cuerpo de la tabla
+        const tbody = document.querySelector("table tbody");
+
+        // Limpiar la tabla antes de mostrar los nuevos datos
+        tbody.innerHTML = "";
+
+        // Obtener la fecha actual
+        const fechaActual = new Date();
+
+        // Recorrer las convocatorias y agregar filas a la tabla
+        convocatorias.forEach((convocatoria, index) => {
+            // Convertir las fechas de inicio y fin a objetos Date
+            const fechaInicio = new Date(convocatoria.fecha_inicio);
+            const fechaFin = new Date(convocatoria.fecha_fin);
+
+            // Determinar el estado de la convocatoria según las fechas
+            let estado = "Cerrada";
+            if (fechaActual >= fechaInicio && fechaActual <= fechaFin) {
+                estado = "Abierta";
+            }
+
+            // Crear una fila en la tabla con la convocatoria y el estado
+            let row = `<tr>
+                <td>${convocatoria.nombre}</td>
+                <td>${convocatoria.categoria}</td>
+                <td>${convocatoria.fecha_inicio}</td>
+                <td>${convocatoria.fecha_fin}</td>
+                <td>${estado}</td>
+                <td>
+                    <button class="button" onclick="editarConvocatoria(${index})">Editar</button>
+                    <button class="button" onclick="eliminarConvocatoria(${index})">Eliminar</button>
+                    <a href="informacion_convocatoria.html?id=${convocatoria.nombre}" class="button">Información</a>
+                </td>
+            </tr>`;
+
+            // Agregar la fila a la tabla
+            tbody.innerHTML += row;
+        });
+    };
+
+    // Función para eliminar una convocatoria
+    function eliminarConvocatoria(index) {
+        // Obtener convocatorias del localStorage
+        let convocatorias = JSON.parse(localStorage.getItem("convocatorias")) || [];
+
+        // Eliminar la convocatoria seleccionada
+        convocatorias.splice(index, 1);
+
+        // Guardar las convocatorias actualizadas en localStorage
+        localStorage.setItem("convocatorias", JSON.stringify(convocatorias));
+
+        // Actualizar la tabla después de la eliminación
+        window.onload();
+    }
+
+    // Función de editar (solo si se necesita)
+    function editarConvocatoria(index) {
+        // Puedes agregar la lógica de edición aquí
+        alert("Funcionalidad de edición no implementada.");
+    }
+  </script>
 </body>
 </html>
