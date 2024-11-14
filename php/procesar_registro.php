@@ -1,24 +1,30 @@
+
 <?php
-include "conexion.php";
 
-// Obtiene los datos del formulario
-$nombre = $_POST["nombre"];
-$apellido = $_POST["apellido"];
-$email = $_POST["email"];
-$contrasena = $_POST["password"]; // ¡Encripta la contraseña antes de guardarla!
+include 'conexion.php';
+// Obtener los datos del formulario
+$nombre = $_POST['nombre'];
+$apellido = $_POST['apellido'];
+$email = $_POST['email'];
+$password = password_hash($_POST['password'], PASSWORD_DEFAULT); // Encriptación de la contraseña
 
-// Prepara la consulta SQL
-$sql = "INSERT INTO usuarios (nombre, apellido, email, contrasena) 
-        VALUES ('$nombre', '$apellido', '$email', '$contrasena')";
 
-// Ejecuta la consulta
+
+/
+// Crear consulta SQL
+$sql = "INSERT INTO usuarios (nombre, apellido, email, password) VALUES ('$nombre', '$apellido', '$email', '$password')";
+
+// Ejecutar la consulta y verificar si se realizó con éxito
+
+i
 if ($conn->query($sql) === TRUE) {
-  // Redirige a registro.html con el parámetro de éxito
-  header("Location: registro.html?exito=1"); 
-  exit(); // Detiene la ejecución del script
+    echo "Registro exitoso.";
 } else {
-  echo "Error: " . $sql . "<br>" . $conn->error;
+    
+   
+echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
+// Cerrar conexión
 $conn->close();
 ?>
