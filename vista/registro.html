@@ -31,7 +31,7 @@
         <section class="login-form login-container">
             <div class="container1">
                 <h2>Registrarse</h2>
-                <form method="post">
+                <form action="/control/procesar_registro.php" method="post">
                     <div class="form-group">
                         <label for="nombre">Nombre:</label>
                         <input type="text" id="nombre" name="nombre" required>
@@ -50,9 +50,6 @@
                     </div>
                     <input type="submit" class="button">
                 </form>
-                <?php
-                    include("../php/procesar_registro.php");
-                    ?>
             </div>
         </section>
     </main>
