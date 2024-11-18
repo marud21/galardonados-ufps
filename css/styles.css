@@ -411,3 +411,16 @@ input[type="file"] {
     margin-top: 50px;
     margin-bottom: 50px; /* Ajusta el valor según el espacio que desees */
   }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    justify-content: center;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: justify; 
+
+}
