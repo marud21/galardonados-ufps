@@ -1,8 +1,20 @@
 <?php
-$conn = new mysqli("localhost", "root", "", "galardonados_ufps");
-if ($conn->connect_error) {
-    die("Error: " . $conn->connect_error);
-} else {
-    echo "Conexión exitosa!";
+
+function conexion() {
+    $servername = "localhost";
+    $username = "root"; 
+    $password = "";
+    $dbname = "premiosgraduados"; 
+
+    // Crear conexión
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
+    // Verificar la conexión
+    if ($conn->connect_error) {
+        die("Error de conexión: " . $conn->connect_error);
+    }
+
+    return $conn;
 }
+
 ?>
