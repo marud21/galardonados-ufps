@@ -422,5 +422,32 @@ th, td {
     border: 1px solid black;
     padding: 8px;
     text-align: justify; 
+}
 
+.create-convocatoria {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 160px);
+
+    margin: 70px 50px;
+}
+.convocatoria-form {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+.input-fecha{
+    background-color: #0080ff;
+    padding: 10px;
+    font-family: "Roboto Mono",monospace;
+    color: #ffffff;
+    font-size: 13px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
 }
