@@ -254,31 +254,26 @@ table {
     table-layout: normal; /* Distribuye el espacio equitativamente entre las columnas */
   }
   
-  td {
-    white-space: nowrap; /*  */
+td {
     overflow: hidden;
     padding: 10px; /* Ajusta el padding según sea necesario */
-  }
+}
   
-  td .button {
+td .button {
     display: inline-block;
     margin: 5px; /* Espacio entre los botones */
     white-space: normal; /* Permite que el texto del botón se ajuste */
   }
 
 th, td {
-    border: 1px solid #ddd;
+    border: 1px solid black;
     padding: 8px;
-    text-align: left;
+    text-align: justify; 
 }
 
 th {
     background-color: #f0f0f0;
 }
-
-/* postulacion */
-
-/* ... otros estilos ... */
 
 .postulacion-form {
     background-color: #fff;
@@ -418,12 +413,6 @@ input[type="file"] {
     width: 100%;
     border-collapse: collapse;
     justify-content: center;
-}
-
-th, td {
-    border: 1px solid black;
-    padding: 8px;
-    text-align: justify; 
 }
 
 .create-convocatoria {
