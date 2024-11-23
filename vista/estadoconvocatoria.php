@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gestión de Convocatorias</title>
+  <title>Estado de Convocatorias</title>
   <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
@@ -34,6 +34,7 @@
                 <table>
                     <thead>
                         <tr>
+                            <th>ID</th>
                             <th>Nombre</th>
                             <th>Categoría</th>
                             <th>Descripción</th>
@@ -51,12 +52,48 @@
         </section>
     </main>
 
-
   <footer>
     <div class="container">
       <p>&copy; 2023 Universidad Francisco de Paula Santander</p>
     </div>
   </footer>
-  <script src="../modelo/funciones.js"></script> </body>
+
+  <!-- Fondo borroso y formulario -->
+  <div id="overlay" class="overlay"></div>
+  <div id="notificationForm" class="notification-form">
+    
+  <h3>Formulario</h3>
+
+    <form action="/control/obtenerconvocatoria.php" method="post" id="formRegistro">
+
+    <label for="nombre">Nombre de la convocatoria</label>
+    <input type="text" id="nombre" name="nombre" required value="">
+
+    <label for="categoria">Categoría</label>
+    <select id="categoria" name="categoria" required value="">
+      <option value="">Seleccione una categoría</option>
+      <option value="investigacion">Investigación</option>
+      <option value="merito_academico">Mérito Académico</option>
+      <option value="proyectos">Proyectos</option>
+    </select>
+
+    <label for="descripcion">Logros y Méritos</label>
+    <textarea id="descripcion" name="descripcion" rows="5" required value=""></textarea>
+
+    <label for="encargado">Encargado/a de la convocatoria</label>
+    <input type="text" id="encargado" name="encargado" required value="">
+
+    <label for="fecha_inicio">Fecha de inicio</label>
+    <input class="input-fecha fecha_inicio" type="date" id="fecha_inicio" name="fecha_inicio" required value="">
+
+    <label for="fecha_fin">Fecha de fin</label>
+    <input class="input-fecha fecha_fin" type="date" id="fecha_fin" name="fecha_fin" required value="">
+
+    <input type="submit" class="button" name="enviar" value="ACTUALIZAR">
+    <button type="button" class="button" onclick="cerrarFormulario()">Cerrar</button>
+    </form>
+  </div>
+
+  <script src="../modelo/funciones.js"></script>
 </body>
 </html>

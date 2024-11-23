@@ -20,3 +20,15 @@ function eliminarConvocatoria(id) {
         xhttp.send("id=" + id);
     }
 }
+
+function mostrarFormulario() {
+    document.getElementById("overlay").style.display = "block";
+    document.getElementById("notificationForm").style.display = "block";
+  }
+
+  // Función para cerrar el formulario y el fondo borroso
+  function cerrarFormulario() {
+    document.getElementById("overlay").style.display = "none";
+    document.getElementById("notificationForm").style.display = "none";
+  }
+

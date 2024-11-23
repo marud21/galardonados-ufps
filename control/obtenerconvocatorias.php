@@ -8,7 +8,8 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         echo "<tr>
-        
+    
+                <td>" . $row["id"] . "</td>
                 <td>" . $row["nombre"] . "</td>
                 <td>" . $row["categoria"] . "</td>
                 <td>" . $row["descripcion"] . "</td>
@@ -17,7 +18,7 @@ if ($result->num_rows > 0) {
                 <td>" . $row["fecha_fin"] . "</td>
                 <td>
                     <button class='button' onclick='eliminarConvocatoria(" . $row["id"] . ")'>Eliminar</button>
-                    <button class='button'>Actualizar</button>
+                    <button class='button' onclick=\"window.location.href='/vista/editarconvocatoria.php?id=" . $row["id"] . "'\">Editar</button>
                     <button class='button'>Inscritos</button>
                 </td>
               </tr>";

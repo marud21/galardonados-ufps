@@ -9,8 +9,6 @@ body {
 
 main {
     flex: 1;
-
-    padding: 30px 15px;
 }
 
 .container {
@@ -254,26 +252,31 @@ table {
     table-layout: normal; /* Distribuye el espacio equitativamente entre las columnas */
   }
   
-td {
+  td {
+    /* white-space: nowrap;  */
     overflow: hidden;
     padding: 10px; /* Ajusta el padding según sea necesario */
-}
+  }
   
-td .button {
+  td .button {
     display: inline-block;
     margin: 5px; /* Espacio entre los botones */
     white-space: normal; /* Permite que el texto del botón se ajuste */
   }
 
 th, td {
-    border: 1px solid black;
+    border: 1px solid #ddd;
     padding: 8px;
-    text-align: justify; 
+    text-align: left;
 }
 
 th {
     background-color: #f0f0f0;
 }
+
+/* postulacion */
+
+/* ... otros estilos ... */
 
 .postulacion-form {
     background-color: #fff;
@@ -415,30 +418,43 @@ input[type="file"] {
     justify-content: center;
 }
 
-.create-convocatoria {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: calc(100vh - 160px);
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: justify; 
 
-    margin: 70px 50px;
 }
-.convocatoria-form {
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    max-width: 600px;
-}
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
+    z-index: 100;
+  }
 
-.input-fecha{
-    background-color: #0080ff;
-    padding: 10px;
-    font-family: "Roboto Mono",monospace;
-    color: #ffffff;
-    font-size: 13px;
+  /* Estilo para el cuadro del formulario */
+  .notification-form {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 101;
+  }
+
+  .button-close {
+    background: red;
+    color: white;
+    padding: 5px 10px;
     border: none;
-    outline: none;
+    cursor: pointer;
     border-radius: 5px;
-}
+  }
