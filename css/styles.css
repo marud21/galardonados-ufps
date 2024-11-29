@@ -197,6 +197,53 @@ footer {
     margin-bottom: 20px;
 }
 
+.form-container {
+    margin-left: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Asegurar que el formulario se centre verticalmente */
+  }
+
+.form-box {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 500px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Agregar una sombra sutil */
+  }
+
+  .form-box h3 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .form-box label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .form-box input[type="text"],
+  .form-box input[type="email"],
+  .form-box input[type="password"],
+  .form-box select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-sizing: border-box;
+  }
+
+  .form-box .form-group {
+    margin-bottom: 15px;
+  }
+
+
+
 label {
     display: block;
     margin-bottom: 5px;
@@ -233,6 +280,7 @@ input[type="password"]:focus {
 /* ... otros estilos ... */
 
 .manage-convocatorias {
+    margin-left: 200px;
     background-color: #fff;
     padding: 40px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -438,6 +486,9 @@ th, td {
 
   /* Estilo para el cuadro del formulario */
   .notification-form {
+    overflow-y: auto; /* Agrega la barra de desplazamiento vertical */ 
+    max-height: 400px; /* Limita la altura máxima del formulario */
+    width: 400px;
     display: none;
     position: fixed;
     top: 50%;
@@ -450,6 +501,14 @@ th, td {
     z-index: 101;
   }
 
+    #notificationForm label, 
+    #notificationForm input, 
+    #notificationForm select,
+    #notificationForm button {
+    margin-bottom: 10px; /* Ajusta el margen inferior entre elementos */
+    padding: 8px; /* Ajusta el padding de los elementos */
+}
+
   .button-close {
     background: red;
     color: white;
@@ -457,4 +516,36 @@ th, td {
     border: none;
     cursor: pointer;
     border-radius: 5px;
+  }
+
+/* Estilos para el menú lateral */
+.sidebar {
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #d91c22;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 10; /* Asegurar que el menú esté encima del contenido */
+  }
+
+  .sidebar a {
+    display: block;
+    color: #ddd;
+    padding: 10px;
+    text-decoration: none;
+    margin-bottom: 10px;
+    border-radius: 3px;
+  }
+
+  .sidebar a:hover {
+    background-color: #c33838;
+  }
+
+  .principal-container {
+    margin-top: 10px;
+    margin-left: 300px; /* Margen izquierdo para el sidebar */
   }
