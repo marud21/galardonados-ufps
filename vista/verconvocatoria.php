@@ -19,15 +19,15 @@ $emailUsuario = $_SESSION['usuario_email'];
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Convocatorias</title>
-  <link rel="stylesheet" href="/css/styles.css">
-  <link rel="stylesheet" href="/css/convocatoria.css">
+  <link rel="stylesheet" href="/docs/css/styles.css">
+  <link rel="stylesheet" href="/docs/css/convocatoria.css">
 </head>
 <body>
 
   <header>
     <div class="container">
       <div class="header-content">
-        <img src="/Img/logo_ufps.jpg" alt="Logo de la Universidad" class="logo">
+        <img src="/docs//Img/logo_ufps.jpg" alt="Logo de la Universidad" class="logo">
         <div class="header-right">
           <h1>Sistema de Reconocimiento de Premios</h1>
           <nav>
@@ -87,7 +87,7 @@ $emailUsuario = $_SESSION['usuario_email'];
   <div id="overlay" class="overlay"></div>
   <div id="notificationForm" class="notification-form">
     <h3>Formulario de Registro</h3>
-    <form id="formRegistro" action="/control/registrarusuarioconvocatoria.php" method="post" enctype="multipart/form-data">
+    <form id="formRegistro" action="../control/registrarusuarioconvocatoria.php" method="post" enctype="multipart/form-data">
       <input type="hidden" name="idConvocatoria" id="idConvocatoria">
       <label for="nombreConvocado">Nombre Completo:</label>
       <input type="text" id="nombreConvocado" name="nombreConvocado" value="<?php echo $nombreUsuario; ?>" required><br><br>

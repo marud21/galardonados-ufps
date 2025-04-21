@@ -19,7 +19,7 @@ if (!isset($_SESSION['administrador_id'])) {
 <header>
     <div class="container">
       <div class="header-content">
-        <img src="/Img/logo_ufps.jpg" alt="Logo de la Universidad" class="logo">
+        <img src="../Img/logo_ufps.jpg" alt="Logo de la Universidad" class="logo">
         <div class="header-right">
           <h1>Sistema de Reconocimiento de Premios</h1>
           <nav>
@@ -38,7 +38,7 @@ if (!isset($_SESSION['administrador_id'])) {
 <main class="form-container"> 
   <div class="form-box"> 
     <h3>Registrar Evaluador</h3>
-    <form id="formRegistrarEvaluador" action="/control/registroevaluador.php" method="post" enctype="multipart/form-data">
+    <form id="formRegistrarEvaluador" action="../control/registroevaluador.php" method="post" enctype="multipart/form-data">
       <label for="usuario">Usuario:</label>
       <input type="text" id="usuario" name="usuario" required><br><br>
       <label for="codigo">Código:</label>

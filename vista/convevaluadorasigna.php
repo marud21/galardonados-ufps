@@ -26,13 +26,13 @@ $resultConvocatorias = $conn->query($sqlConvocatorias);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Información de Perfil</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
 <header>
     <div class="container">
       <div class="header-content">
-        <img src="/Img/logo_ufps.jpg" alt="Logo de la Universidad" class="logo">
+        <img src="../Img/logo_ufps.jpg" alt="Logo de la Universidad" class="logo">
         <div class="header-right">
           <h1>Sistema de Reconocimiento de Premios</h1>
           <nav>
@@ -75,7 +75,7 @@ $resultConvocatorias = $conn->query($sqlConvocatorias);
                               echo "<td>" . $rowConvocatoria["fecha_fin"] . "</td>";
                               // Agregar el botón "Inscritos"
                               echo "<td>
-                                      <a href='/vista/inscritosconvocatoria.php?id=" . $rowConvocatoria["id"] . "' class='button'>Inscritos</a>
+                                      <a href='../vista/inscritosconvocatoria.php?id=" . $rowConvocatoria["id"] . "' class='button'>Inscritos</a>
                                     </td>";
                               echo "</tr>";
                           }

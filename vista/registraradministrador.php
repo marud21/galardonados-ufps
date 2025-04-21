@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin</title>
-  <link rel="stylesheet" href="/css/styles.css">
-  <link rel="stylesheet" href="/css/convocatoria.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/convocatoria.css">
   <script src="../modelo/funciones.js"></script> 
 </head>
 <body>
@@ -13,7 +13,7 @@
   <header>
     <div class="container">
       <div class="header-content">
-        <img src="/Img/logo_ufps.jpg" alt="Logo de la Universidad" class="logo">
+        <img src="../Img/logo_ufps.jpg" alt="Logo de la Universidad" class="logo">
         <div class="header-right">
           <h1>Registrar administrador</h1>
         </div>

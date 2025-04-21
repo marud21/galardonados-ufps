@@ -31,13 +31,13 @@ $resultConvocatorias = $conn->query($sqlConvocatorias);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Principal</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
     <header>
         <div class="container">
             <div class="header-content">
-                <img src="/Img/logo_ufps.jpg" alt="Logo de la Universidad" class="logo">
+                <img src="../Img/logo_ufps.jpg" alt="Logo de la Universidad" class="logo">
                 <div class="header-right">
                     <h1>Sistema de Reconocimiento de Premios</h1>
                     <nav>
@@ -67,7 +67,7 @@ $resultConvocatorias = $conn->query($sqlConvocatorias);
             </div>
         </section>
     </main>
-
+                
     <aside class="sidebar"> 
     <a href="perfilgraduado.php">Mi perfil</a>
     <a href="verconvocatoria.php">Ver convocatorias</a>
