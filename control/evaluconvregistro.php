@@ -33,7 +33,7 @@ if ($result->num_rows > 0) {
                 <td>" . $row["fecha_inicio"] . "</td>
                 <td>" . $row["fecha_fin"] . "</td>
                 <td>
-                    <a href='/docs/vista/inscritosconvocatoria.php?id=" . $row["id"] . "' class='button'>Inscritos</a>
+                    <a href='../vista/inscritosconvocatoria.php?id=" . $row["id"] . "' class='button'>Inscritos</a>
                 </td>
               </tr>";
     }

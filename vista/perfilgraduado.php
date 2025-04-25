@@ -8,7 +8,7 @@ if (!isset($_SESSION['usuario_id'])) {
 }
 
 // Incluir el archivo de conexión
-include 'C:/xampp/htdocs/galardonados-ufps/control/conexion.php';
+include dirname(__DIR__).'/control/conexion.php';
 $conn = conexion();
 
 // Obtener el ID del usuario de la sesión
@@ -28,13 +28,13 @@ if ($resultUsuario->num_rows > 0) {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Información de Perfil</title>
-        <link rel="stylesheet" href="/docs/css/styles.css">
+        <link rel="stylesheet" href="../css/styles.css">
     </head>
     <body>
     <header>
         <div class="container">
             <div class="header-content">
-                <img src="/docs/Img/logo_ufps.jpg" alt="Logo de la Universidad" class="logo">
+                <img src="../Img/logo_ufps.jpg" alt="Logo de la Universidad" class="logo">
                 <div class="header-right">
                     <h1>Sistema de Reconocimiento de Premios</h1>
                     <nav>
@@ -60,8 +60,8 @@ if ($resultUsuario->num_rows > 0) {
 
     <aside class="sidebar"> 
     <a href="#">Mi perfil</a>
-    <a href="verconvocatoria.php">Ver Convocatorias</a>
-    <a href="convograregis.php">Mis Convocatorias</a>
+    <a href="../vista/verconvocatoria.php">Ver Convocatorias</a>
+    <a href="../vista/convograregis.php">Mis Convocatorias</a>
     <a href="../modelo/cerrarsesion.php">Cerrar sesión</a>
   </aside>
 

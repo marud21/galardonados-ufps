@@ -37,7 +37,7 @@ if (!isset($_SESSION['administrador_id'])) {
         </header>
 
         <?php
-            include 'C:/xampp/htdocs/galardonados-ufps/control/conexion.php';
+            include dirname(__DIR__).'/control/conexion.php';
             $conn = conexion();
 
             if (isset($_GET['id'])) {
@@ -103,7 +103,7 @@ if (!isset($_SESSION['administrador_id'])) {
                         </select>
                     </div>
                     <input type="submit" class="button" value="Actualizar">
-                    <button type="button" class="button" onclick="window.location.href = 'registrarevaluador.php'">Volver</button>
+                    <button type="button" class="button" onclick="window.location.href = '../vista/registrarevaluador.php'">Volver</button>
                 </form>
             </div>
         </main> 

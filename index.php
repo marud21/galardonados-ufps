@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sistema de Reconocimiento de Premios</title>
-  <link rel="stylesheet" href="/docs/css/styles.css">
+  <link rel="stylesheet" href="./css/styles.css">
   
 
 </head>
@@ -12,14 +12,14 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <img src="/docs/Img/logo_ufps.jpg" alt="Logo de la Universidad" class="logo">
+                <img src="./Img/logo_ufps.jpg" alt="Logo de la Universidad" class="logo">
                 <div class="header-right">
                     <h1>Sistema de Reconocimiento de Premios</h1>
                     <nav>
                         <div class="dropdown">
                             <button class="dropbtn">&#9776;</button> 
                             <div class="dropdown-content">
-                                <a href="/docs/vista/Login.html">Iniciar sesión</a>
+                                <a href="./vista/Login.html">Iniciar sesión</a>
                             </div>
                         </div>
                     </nav>
@@ -35,10 +35,10 @@
         <h2>Galería de Fotos</h2>
         <div class="gallery-container">
           <div class="gallery-slider">
-            <img src="/docs/Img/premiados1.jpg" alt="Imagen 1">
-            <img src="/docs/Img/premiados2.jpg" alt="Imagen 2">
-            <img src="/docs/Img/YTJHATTBEZBDVHY66FHC3PEAHA.jpg" alt="Imagen 3">
-            <img src="/docs/Img/imagen3.jpg" alt="Imagen 3">
+            <img src="./Img/premiados1.jpg" alt="Imagen 1">
+            <img src="./Img/premiados2.jpg" alt="Imagen 2">
+            <img src="./Img/YTJHATTBEZBDVHY66FHC3PEAHA.jpg" alt="Imagen 3">
+            <img src="./Img/imagen3.jpg" alt="Imagen 3">
 
             </div>
         </div>
@@ -74,7 +74,7 @@
         <h2>¡Reconocemos la excelencia de nuestros graduados!</h2>
         <p>Esta plataforma te permite postularte a convocatorias de premios y ser reconocido por tus logros académicos y
           profesionales.</p>
-        <a href="/docs/vista/Login.html" class="button">Ver Convocatorias</a>
+        <a href="./vista/Login.html" class="button">Ver Convocatorias</a>
       </div>
     </section>
 
@@ -85,6 +85,6 @@
       <p>&copy; 2023 Universidad Francisco de Paula Santander</p>
     </div>
   </footer>
-  <script src="/docs/js/index.js"></script>
+  <script src="./js/index.js"></script>
 </body>
 </html>

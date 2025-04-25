@@ -21,7 +21,7 @@ if ($result->num_rows > 0) {
                 <td>" . $row["fecha_fin"] . "</td>
                 <td>
                     <button class='button' onclick='eliminarconvocatoria(" . $row["id"] . ")'>Eliminar</button>
-                    <button class='button' onclick=\"window.location.href='/docs/vista/editarconvocatoria.php?id=" . $row["id"] . "'\">Editar</button>
+                    <button class='button' onclick=\"window.location.href='../vista/editarconvocatoria.php?id=" . $row["id"] . "'\">Editar</button>
                     <a href='../vista/inscritosconvocatoria.php?id=" . $row["id"] . "' class='button'>Inscritos</a>
                 </td>
               </tr>";

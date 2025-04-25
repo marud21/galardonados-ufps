@@ -58,7 +58,7 @@ if (!isset($_SESSION['administrador_id'])) {
         <select id="cargo" name="cargo" required>
           <?php
           // Conexión a la base de datos (si es necesario)
-          include 'C:/xampp/htdocs/galardonados-ufps/control/conexion.php';
+          include dirname(__DIR__).'/control/conexion.php';
           $conn = conexion();
 
           // Consulta para obtener los cargos
@@ -91,7 +91,7 @@ if (!isset($_SESSION['administrador_id'])) {
         </select>
       </div>
       <input type="submit" class="button" value="Registrar">
-      <button type="button" class="button" onclick="window.location.href = 'registrarevaluador.php'">Volver</button>
+      <button type="button" class="button" onclick="window.location.href = '../vista/registrarevaluador.php'">Volver</button>
     </form>
   </div> 
 </main>

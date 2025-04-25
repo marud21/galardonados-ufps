@@ -8,7 +8,7 @@ if (!isset($_SESSION['usuario_email'])) {
 }
 
 // Conexión a la base de datos (si es necesario)
-include 'C:/xampp/htdocs/galardonados-ufps/control/conexion.php';
+include dirname(__DIR__).'/control/conexion.php';
 $conn = conexion();
 
 // Obtener la información del usuario de la sesión
@@ -69,9 +69,9 @@ $resultConvocatorias = $conn->query($sqlConvocatorias);
     </main>
                 
     <aside class="sidebar"> 
-    <a href="perfilgraduado.php">Mi perfil</a>
-    <a href="verconvocatoria.php">Ver convocatorias</a>
-    <a href="convograregis.php">Mis convocatorias</a>
+    <a href="../vista/perfilgraduado.php">Mi perfil</a>
+    <a href="../vista/verconvocatoria.php">Ver convocatorias</a>
+    <a href="../vista/convograregis.php">Mis convocatorias</a>
     <a href="../modelo/cerrarsesion.php">Cerrar sesión</a>
   </aside>
 

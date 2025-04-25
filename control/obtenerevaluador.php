@@ -25,7 +25,7 @@ if ($result->num_rows > 0) {
         echo "<td>";
 
         // Botón de editar
-        echo "<button class='button' onclick=\"window.location.href='/docs/vista/editarevaluador.php?id=" . $row["id"] . "'\">Editar</button>";
+        echo "<button class='button' onclick=\"window.location.href='../vista/editarevaluador.php?id=" . $row["id"] . "'\">Editar</button>";
 
         // Botón de eliminar
         echo "<button class='button' onclick='eliminarEvaluador(" . $row["id"] . ")'>Eliminar</button>";

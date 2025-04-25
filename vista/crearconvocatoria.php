@@ -13,20 +13,20 @@ if (!isset($_SESSION['administrador_id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crear Convocatoria</title>
-    <link rel="stylesheet" href="/docs/css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
     <header>
         <div class="container">
             <div class="header-content">
-                <img src="/docs/Img/logo_ufps.jpg" alt="Logo de la Universidad" class="logo">
+                <img src="../Img/logo_ufps.jpg" alt="Logo de la Universidad" class="logo">
                 <div class="header-right">
                     <h1>Sistema de Reconocimiento de Premios</h1>
                     <nav>
                         <div class="dropdown">
                             <button class="dropbtn">&#9776;</button>
                             <div class="dropdown-content">
-                                <a href="estadoconvocatoria.php">Convocatorias</a>
+                                <a href="..vista/estadoconvocatoria.php">Convocatorias</a>
                                 <!--<a href="/vista/registro.html">Registrarse</a>-->
                             </div>
                         </div>
@@ -49,7 +49,7 @@ if (!isset($_SESSION['administrador_id'])) {
                 <select id="categoria" name="categoria" required>
                     <?php
                     // Conexión a la base de datos (si es necesario)
-                    include 'C:/xampp/htdocs/galardonados-ufps/control/conexion.php';
+                    include dirname(__DIR__).'/control/conexion.php';
                     $conn = conexion();
 
                     // Consulta para obtener las categorías
@@ -105,9 +105,9 @@ if (!isset($_SESSION['administrador_id'])) {
 
     <aside class="sidebar"> 
         <a href="#">Mi perfil</a>
-        <a href="crearconvocatoria.php">Crear Convocatoria</a>
-        <a href="registrarevaluador.php">Evaluadores</a>
-        <a href="estadoconvocatoria.php">Convocatorias Disponibles</a>
+        <a href="../vista/crearconvocatoria.php">Crear Convocatoria</a>
+        <a href="../vista/registrarevaluador.php">Evaluadores</a>
+        <a href="../vista/estadoconvocatoria.php">Convocatorias Disponibles</a>
         <a href="../modelo/cerrarsesion.php">Cerrar sesión</a>
     </aside>
 

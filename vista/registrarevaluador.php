@@ -13,8 +13,8 @@ if (!isset($_SESSION['administrador_id'])) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Evaluadores</title>
-  <link rel="stylesheet" href="/docs/css/styles.css">
-  <link rel="stylesheet" href="/docs/css/convocatoria.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/convocatoria.css">
   <script src="../modelo/funciones.js"></script> 
 </head>
 <body>
@@ -22,7 +22,7 @@ if (!isset($_SESSION['administrador_id'])) {
   <header>
     <div class="container">
       <div class="header-content">
-        <img src="/docs/Img/logo_ufps.jpg" alt="Logo de la Universidad" class="logo">
+        <img src="../Img/logo_ufps.jpg" alt="Logo de la Universidad" class="logo">
         <div class="header-right">
           <h1>Sistema de Reconocimiento de Premios</h1>
           <nav>
@@ -64,16 +64,16 @@ if (!isset($_SESSION['administrador_id'])) {
             ?>          
           </tbody>
         </table>
-        <button class="button" onclick="window.location.href = 'mostrarevaluadores.php'">Registrarse</button>
+        <button class="button" onclick="window.location.href = '../vista/mostrarevaluadores.php'">Registrarse</button>
       </div>
     </section>
   </main>
 
   <aside class="sidebar"> 
     <a href="#">Mi perfil</a>
-    <a href="crearconvocatoria.php">Crear Convocatoria</a>
-    <a href="registrarevaluador.php">Evaluadores</a>
-    <a href="estadoconvocatoria.php">Convocatorias Disponibles</a>
+    <a href="../vista/crearconvocatoria.php">Crear Convocatoria</a>
+    <a href="../vista/registrarevaluador.php">Evaluadores</a>
+    <a href="../vista/estadoconvocatoria.php">Convocatorias Disponibles</a>
     <a href="../modelo/cerrarsesion.php">Cerrar sesión</a>
   </aside>
 

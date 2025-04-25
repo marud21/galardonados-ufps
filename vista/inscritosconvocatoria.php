@@ -17,7 +17,7 @@
             <div class="dropdown">
               <button class="dropbtn">&#9776;</button>
               <div class="dropdown-content">
-                <a href="principalevaluador.php">Volver</a>
+                <a href="../vista/principalevaluador.php">Volver</a>
                 <a href="#"></a>
               </div>
             </div>
@@ -52,7 +52,7 @@
     </main>
 
     <aside class="sidebar"> 
-    <a href="#">Mi perfil</a>
+    <a href="../vista/principalevaluador.php">Mi perfil</a>
     <!--<a href="crearconvocatoria.php">Crear Convocatoria</a>
     <a href="registrarevaluador.php">Evaluadores</a>
     <a href="estadoconvocatoria.php">Convocatorias Disponibles</a>

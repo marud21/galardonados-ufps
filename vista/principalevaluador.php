@@ -8,7 +8,7 @@ if (!isset($_SESSION['evaluador_id'])) {
 }
 
 // Incluir el archivo de conexión
-include 'C:/xampp/htdocs/galardonados-ufps/control/conexion.php';
+include dirname(__DIR__).'/control/conexion.php';
 $conn = conexion();
 
 // Obtener el ID del usuario de la sesión
@@ -74,9 +74,9 @@ if ($resultUsuario->num_rows > 0) {
     </main>
 
     <aside class="sidebar">
-        <a href="principalevaluador.php">Mi perfil</a>
+        <a href="../vista/principalevaluador.php">Mi perfil</a>
         <!--<a href="verconvocatoria.php"></a>-->
-        <a href="convevaluadorasigna.php">Mis convocatorias</a>
+        <a href="../vista/convevaluadorasigna.php">Mis convocatorias</a>
         <a href="../modelo/cerrarsesion.php">Cerrar sesión</a>
     </aside>
 

@@ -49,9 +49,9 @@
 
   <aside class="sidebar"> 
     <a href="#">Mi perfil</a>
-    <a href="crearconvocatoria.php">Crear Convocatoria</a>
-    <a href="registrarevaluador.php">Evaluadores</a>
-    <a href="estadoconvocatoria.php">Convocatorias Disponibles</a>
+    <a href="../vista/crearconvocatoria.php">Crear Convocatoria</a>
+    <a href="../vista/registrarevaluador.php">Evaluadores</a>
+    <a href="../vista/estadoconvocatoria.php">Convocatorias Disponibles</a>
     <a href="../modelo/cerrarsesion.php">Cerrar sesión</a>
   </aside>
 
